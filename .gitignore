@@ -1,0 +1,56 @@
+.vscode/
+# --- Generated data -------------------------------------------------------
+# The libraries, the agent's memory, logs, and in-flight stream pieces. All of
+# it is reproduced by running the daemon, none of it belongs in history, and it
+# gets large fast: a video's stream pieces are as large as the video.
+data/
+
+# --- Media artefacts anywhere ---------------------------------------------
+# A safety net in case a stream or test output lands outside data/.
+*.flac
+*.mp3
+*.m4a
+*.opus
+*.webm
+*.webp
+*.mp4
+*.mkv
+*.m4s
+*.ts
+*.mka
+*.ogg
+
+# --- Python ---------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+*.egg-info/
+build/
+dist/
+
+# Local virtualenvs, if one is ever created inside the project. (This project
+# normally runs from the conda env at D:\envs\vanta, which lives outside it.)
+.venv/
+venv/
+env/
+
+# --- Local configuration --------------------------------------------------
+# AUDIODAEMON_* overrides (model, Ollama host, ffmpeg location) are per-machine.
+.env
+.env.local
+
+# --- Editor ---------------------------------------------------------------
+# .vscode/settings.json is kept: it pins the Python interpreter/env manager for
+# the project, which is worth sharing. Everything else in there is personal.
+.vscode/*
+!.vscode/settings.json
+.idea/
+
+# --- OS -------------------------------------------------------------------
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+.DS_Store
